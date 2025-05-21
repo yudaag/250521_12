@@ -48,7 +48,7 @@ def get_vectorstore(_docs):
 # Chain 구성
 @st.cache_resource
 def initialize_components(selected_model):
-    file_path = "대한민국헌법(헌법제10호).pdf"
+    file_path = "https://github.com/yudaag/250521_12/blob/main/대한민국헌법(헌법제10호).pdf"
     pages = load_and_split_pdf(file_path)
     vectorstore = get_vectorstore(pages)
     retriever = vectorstore.as_retriever()
